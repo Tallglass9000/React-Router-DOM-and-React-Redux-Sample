@@ -1,0 +1,32 @@
+{
+  "name": "create-react-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.20.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-calendar": "^2.11.2",
+    "react-dates": "^15.5.1",
+    "react-dom": "^16.2.0",
+    "react-overlays": "^0.7.3",
+    "react-redux": "^5.0.6",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
